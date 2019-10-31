@@ -1,0 +1,75 @@
+body {
+    height: 45em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    top : 0px;
+    position : absolute;
+    z-index: 5;
+}
+
+#game {
+    width : 600px;
+    height: 600px;
+    padding : 0px;
+    background-color: aquamarine;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    background-color: orange;
+    width : 180px;
+    height : 180px;
+    padding: 5px;
+    margin : 2px;
+    border : 3px solid black;
+    position: absolute;
+}
+
+.box {
+    font-family : monospace;
+    font-size: 100px;
+    display : inline-flex;
+    align-items: center;
+    justify-content: center
+}
+
+#two {
+    left : 200px;
+}
+
+#three {
+    left : 400px;
+}
+
+#four {
+    top : 200px;
+}
+
+#five {
+    top : 200px;
+    left : 200px;
+}
+
+#six {
+    top : 200px;
+    left : 400px;
+}
+
+#seven {
+    top : 400px;
+}
+
+#eight {
+    top : 400px;
+    left : 200px;
+}
+
+#nine {
+    top: 400px;
+    left : 400px;
+}
