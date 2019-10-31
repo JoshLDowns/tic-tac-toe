@@ -1,20 +1,35 @@
 body {
-    height: 45em;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 h1 {
     top : 0px;
     position : absolute;
+    font-family: fantasy;
+}
+
+#title {
+    padding: 5px;
+    border : 3px solid black;
+    background-color: aquamarine;
+    color : orange;
+}
+
+#win, #lose {
+    position: absolute;
     z-index: 5;
+    align-content: center;
+    justify-content: center;
+    font-size: 120px;
+    margin-top: 300px;
 }
 
 #game {
     width : 600px;
     height: 600px;
     padding : 0px;
+    margin-top : 75px;
     background-color: aquamarine;
     margin-left: auto;
     margin-right: auto;

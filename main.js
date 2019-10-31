@@ -1,6 +1,7 @@
 let playerTurn = true;
 let playerArray = [];
 let compArray = [];
+let turnCount = 0;
 
 let boxes = Array.from(document.getElementsByClassName("box"));
 
@@ -39,10 +40,9 @@ function boxClick() {
         event.target.textContent = "X";
         currentBox.clicked = true;
         playerArray.push(boxNumLookUp[boxNum]);
-        console.log(playerArray);
-        console.log(currentBox);
-        console.log(boxNum);
+        playerClick();
         removeEventListener("click", boxClick);
+        turnCount += 1;
     }
 }
 
@@ -64,4 +64,21 @@ let boxNumLookUp = {
     nine: 9
 }
 
-//use JSON.stringify(array) to compare arrays... maybe...!
+function playerClick() {
+    if (playerArray.length >= 3) {
+        for (arr of winningArrays) {
+            let trueCount = 0;
+            for (let i = 0; i < playerArray.length; i++) {
+                if (arr.includes(playerArray[i])) {
+                    trueCount = trueCount + 1;
+                }
+            }
+            if (trueCount === 3) {
+                let winText = document.getElementById("win");
+                winText.textContent = "YOU WIN!!!!";
+            }
+        }
+    } else {
+    return playerTurn = false;
+    }
+}
